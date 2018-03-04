@@ -178,6 +178,7 @@ def ask():
     print("Please enter the name of a pokemon!")
     print("Please capitalize the first letter")
     pokemonName = input()
+    pokemonName = pokemonName.capitalize()
     return pokemonName
 
 main()
