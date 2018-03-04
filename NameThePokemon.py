@@ -3,7 +3,156 @@ def main():
     guessed = 0
     missed = 0
     
-    PokemonList = getPkmn()    
+    PokemonList = {'Bulbasaur':1,
+'Ivysaur':1,
+'Venusaur':1,
+'Charmander':1,
+'Charmeleon':1,
+'Charizard':1,
+'Squirtle':1,
+'Wartortle':1,
+'Blastoise':1,
+'Caterpie':1,
+'Metapod':1,
+'Butterfree':1,
+'Weedle':1,
+'Kakuna':1,
+'Beedrill':1,
+'Pidgey':1,
+'Pidgeotto':1,
+'Pidgeot':1,
+'Rattata':1,
+'Raticate':1,
+'Spearow':1,
+'Fearow':1,
+'Ekans':1,
+'Arbok':1,
+'Pikachu':1,
+'Raichu':1,
+'Sandshrew':1,
+'Sandslash':1,
+'Nidoran':1,
+'Nidorina':1,
+'Nidoqueen':1,
+'Nidoran':1,
+'Nidorino':1,
+'Nidoking':1,
+'Clefairy':1,
+'Clefable':1,
+'Vulpix':1,
+'Ninetales':1,
+'Jigglypuff':1,
+'Wigglytuff':1,
+'Zubat':1,
+'Golbat':1,
+'Oddish':1,
+'Gloom':1,
+'Vileplume':1,
+'Paras':1,
+'Parasect':1,
+'Venonat':1,
+'Venomoth':1,
+'Diglett':1,
+'Dugtrio':1,
+'Meowth':1,
+'Persian':1,
+'Psyduck':1,
+'Golduck':1,
+'Mankey':1,
+'Primeape':1,
+'Growlithe':1,
+'Arcanine':1,
+'Poliwag':1,
+'Poliwhirl':1,
+'Poliwrath':1,
+'Abra':1,
+'Kadabra':1,
+'Alakazam':1,
+'Machop':1,
+'Machoke':1,
+'Machamp':1,
+'Bellsprout':1,
+'Weepinbell':1,
+'Victreebel':1,
+'Tentacool':1,
+'Tentacruel':1,
+'Geodude':1,
+'Graveler':1,
+'Golem':1,
+'Ponyta':1,
+'Rapidash':1,
+'Slowpoke':1,
+'Slowbro':1,
+'Magnemite':1,
+'Magneton':1,
+'Farfetch’d':1,
+'Doduo':1,
+'Dodrio':1,
+'Seel':1,
+'Dewgong':1,
+'Grimer':1,
+'Muk':1,
+'Shellder':1,
+'Cloyster':1,
+'Gastly':1,
+'Haunter':1,
+'Gengar':1,
+'Onix':1,
+'Drowzee':1,
+'Hypno':1,
+'Krabby':1,
+'Kingler':1,
+'Voltorb':1,
+'Electrode':1,
+'Exeggcute':1,
+'Exeggutor':1,
+'Cubone':1,
+'Marowak':1,
+'Hitmonlee':1,
+'Hitmonchan':1,
+'Lickitung':1,
+'Koffing':1,
+'Weezing':1,
+'Rhyhorn':1,
+'Rhydon':1,
+'Chansey':1,
+'Tangela':1,
+'Kangaskhan':1,
+'Horsea':1,
+'Seadra':1,
+'Goldeen':1,
+'Seaking':1,
+'Staryu':1,
+'Starmie':1,
+'Mr. Mime':1,
+'Scyther':1,
+'Jynx':1,
+'Electabuzz':1,
+'Magmar':1,
+'Pinsir':1,
+'Tauros':1,
+'Magikarp':1,
+'Gyarados':1,
+'Lapras':1,
+'Ditto':1,
+'Eevee':1,
+'Vaporeon':1,
+'Jolteon':1,
+'Flareon':1,
+'Porygon':1,
+'Omanyte':1,
+'Omastar':1,
+'Kabuto':1,
+'Kabutops':1,
+'Aerodactyl':1,
+'Snorlax':1,
+'Articuno':1,
+'Zapdos':1,
+'Moltres':1,
+'Dratini':1,
+'Dragonair':1,
+'Dragonite':1,
+'Mewtwo':1}    
     length = len(PokemonList)
 
     while guessed < length:
@@ -13,25 +162,12 @@ def main():
             guessed +=1
         else:
             missed +=1
-    
-
-
-def getPkmn():
-    pkmnList = {}
-    file = open('pkmn.txt','r')
-    index = 0
-    for line in file:
-        pkmnList[index] = line
-        index +=1
-    file.close()
-    return pkmnList
-
 
 
 
 def checkList(List,pokemon):
     if pokemon in List:
-        List.remove(pokemon)
+        List.pop(pokemon)
         print("Congratulations! Only ",len(List),"/150 to go!")
         return True
     else:
@@ -45,4 +181,3 @@ def ask():
     return pokemonName
 
 main()
-
