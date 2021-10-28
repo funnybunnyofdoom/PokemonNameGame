@@ -153,9 +153,10 @@ def main():
 'Dragonair':1,
 'Dragonite':1,
 'Mewtwo':1}    
+
     length = len(PokemonList)
 
-    while guessed < length:
+    while guessed < 150:
         PokemonName = ask()
         b = checkList(PokemonList,PokemonName)
         if b == True:
@@ -168,7 +169,7 @@ def main():
 def checkList(List,pokemon):
     if pokemon in List:
         List.pop(pokemon)
-        print("Congratulations! Only ",len(List),"/150 to go!")
+        print("Congratulations! Only ",len(List)+1,"/150 to go!")
         return True
     else:
         print("I'm sorry! Try again")
@@ -176,7 +177,7 @@ def checkList(List,pokemon):
 
 def ask():
     print("Please enter the name of a pokemon!")
-    print("Please capitalize the first letter")
+    ##print("Please capitalize the first letter")
     pokemonName = input()
     pokemonName = pokemonName.capitalize()
     return pokemonName
